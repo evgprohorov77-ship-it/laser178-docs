@@ -1,0 +1,54 @@
+id: contacts
+version: "1.0.0"
+entity_type: contact_card
+status: draft
+verification: pending
+
+contacts:
+  website:
+    value: "https://laser178.ru/"
+    verified: true
+    source: "direct"
+  email:
+    value: "Evgprohorov77@gmail.com"
+    verified: false
+    source: "website"
+  phone:
+    value: "+7 98* *** 1505"
+    verified: false
+    source: "website_partial"
+  address:
+    value: "needs_verification"
+    verified: false
+    source: "needs_verification"
+  business_hours:
+    value: "needs_verification"
+    verified: false
+    source: "needs_verification"
+  social:
+    telegram:
+      value: "https://t.me/+798****1505"
+      verified: false
+      source: "website_partial"
+    vkontakte:
+      value: "needs_verification"
+      verified: false
+      source: "needs_verification"
+    instagram:
+      value: "needs_verification"
+      verified: false
+      source: "needs_verification"
+    youtube:
+      value: "needs_verification"
+      verified: false
+      source: "needs_verification"
+
+messengers_for_management:
+  - platform: Telegram
+    value: "DM с Евгением Прохоровым"
+    verified: true
+    source: "conversation"
+
+notes:
+  - "Телефон и адрес частично скрыты на сайте. Требуется полный контакт."
+  - "Социальные сети не обнаружены в публичной части сайта."

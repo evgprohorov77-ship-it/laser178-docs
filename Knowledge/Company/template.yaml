@@ -1,0 +1,22 @@
+id: template
+version: "1.0.0"
+entity_type: ENTITY_TYPE
+status: draft
+verification: pending
+
+# Шаблон для любой сущности Knowledge.
+# Копируйте и заменяйте ENTITY_TYPE на нужный тип.
+# Все поля value/verified/source должны быть заполнены.
+
+field_name:
+  value: "..."
+  verified: false
+  source: "needs_verification"
+
+list_field:
+  - value: "..."
+    verified: false
+    source: "needs_verification"
+
+notes:
+  - "..."

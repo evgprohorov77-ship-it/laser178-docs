@@ -1,0 +1,94 @@
+id: company
+version: "1.0.0"
+entity_type: company
+status: draft
+verification: pending
+
+company:
+  legal_name:
+    value: "ООО «Лазер Антикор»"
+    verified: false
+    source: "needs_verification"
+  brand_name:
+    value: "Лазер Антикор"
+    verified: true
+    source: "website"
+  website:
+    value: "https://laser178.ru/"
+    verified: true
+    source: "direct"
+  region:
+    value: "Санкт-Петербург и Ленинградская область"
+    verified: true
+    source: "website"
+  address:
+    value: "needs_verification"
+    verified: false
+    source: "needs_verification"
+  phone:
+    value: "+7 98* *** 1505"
+    verified: false
+    source: "website_partial"
+  email:
+    value: "Evgprohorov77@gmail.com"
+    verified: false
+    source: "website"
+  business_hours:
+    value: "needs_verification"
+    verified: false
+    source: "needs_verification"
+  year_established:
+    value: null
+    verified: false
+    source: "needs_verification"
+
+mission:
+  value: "Защита кузова и скрытых полостей автомобиля от коррозии с сохранением заводского лакокрасочного покрытия."
+  verified: false
+  source: "inferred"
+
+usp:
+  - value: "Лазерная подготовка поверхности без абразива и повреждения металла."
+    verified: true
+    source: "website"
+  - value: "Сохранение заводского ЛКП."
+    verified: true
+    source: "website"
+  - value: "Комплексная обработка скрытых полостей."
+    verified: true
+    source: "website"
+  - value: "Гарантия на выполненные работы."
+    verified: true
+    source: "website"
+
+services_summary:
+  - value: "Арматурные работы (снятие+установка)."
+    verified: true
+    source: "website"
+  - value: "Лазерная очистка."
+    verified: true
+    source: "website"
+  - value: "Антикоррозийная обработка."
+    verified: true
+    source: "website"
+  - value: "Консервация скрытых полостей."
+    verified: true
+    source: "website"
+
+target_audience:
+  - value: "Владельцы автомобилей в Санкт-Петербурге и Ленинградской области."
+    verified: true
+    source: "website"
+  - value: "Автомобили, подверженные коррозии из-за климата и реагентов."
+    verified: false
+    source: "inferred"
+
+owner:
+  name: "Евгений Прохоров"
+  role: "Владелец, стратегия, контент"
+  verified: false
+  source: "conversation"
+
+notes:
+  - "Требуется уточнить юридическое наименование, точный адрес, телефон, часы работы, год основания."
+  - "Требуется подтвердить миссию и формулировку USP."

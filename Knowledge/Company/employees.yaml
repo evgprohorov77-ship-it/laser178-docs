@@ -1,0 +1,35 @@
+id: employees
+version: "1.0.0"
+entity_type: employee_directory
+status: draft
+verification: pending
+
+employees:
+  - name: "Евгений Прохоров"
+    role: "Владелец, стратегия, контент"
+    responsibilities:
+      - "Принятие архитектурных и стратегических решений"
+      - "Owner approval для P0/P1 и production override"
+      - "Контент и позиционирование"
+    verified: false
+    source: "conversation"
+
+roles_in_laos:
+  - role: "Owner"
+    description: "Принимает решения по критичным изменениям, production override и Knowledge verification."
+    approval_level: "P0/P1/production"
+  - role: "Content reviewer"
+    description: "Проверяет сгенерированный контент на соответствие Knowledge."
+    approval_level: "content"
+  - role: "Technical reviewer"
+    description: "Проверяет изменения сайта и SEO-параметры."
+    approval_level: "technical"
+  - role: "Master / executor"
+    description: "Выполняет работы в боксе."
+    approval_level: "operations"
+    verified: false
+    source: "inferred"
+
+notes:
+  - "Требуется заполнить: мастера, администраторы, контент-менеджеры, SEO-специалисты."
+  - "Роли в LAOS — рабочие, не обязательно совпадают с штатным расписанием."

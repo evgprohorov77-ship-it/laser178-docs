@@ -1,0 +1,140 @@
+id: cars
+version: "1.0.0"
+entity_type: car_catalog
+status: draft
+verification: pending
+
+popular_models:
+  - brand: Toyota
+    model: Camry
+    body_types: [Седан]
+    risk_zones:
+      - "Пороги"
+      - "Арки"
+      - "Днище"
+    recommended_services:
+      - "Антикоррозийная обработка"
+      - "Консервация скрытых полостей"
+    verified: false
+    source: "memory_user_preference"
+
+  - brand: BMW
+    model: X5
+    body_types: [Кроссовер, Внедорожник]
+    risk_zones:
+      - "Дверные проёмы"
+      - "Арки"
+      - "Подрамник"
+    recommended_services:
+      - "Антикоррозийная обработка"
+      - "Лазерная очистка"
+    verified: false
+    source: "memory_user_preference"
+
+  - brand: Lada
+    model: Vesta
+    body_types: [Седан]
+    risk_zones:
+      - "Пороги"
+      - "Арки"
+      - "Днище"
+    recommended_services:
+      - "Антикоррозийная обработка"
+      - "Консервация скрытых полостей"
+    verified: false
+    source: "memory_user_preference"
+
+  - brand: Kia
+    model: Rio
+    body_types: [Седан]
+    risk_zones:
+      - "Пороги"
+      - "Арки"
+    recommended_services:
+      - "Антикоррозийная обработка"
+    verified: false
+    source: "memory_user_preference"
+
+  - brand: Skoda
+    model: Octavia
+    body_types: [Хэтчбек, Седан]
+    risk_zones:
+      - "Дверные проёмы"
+      - "Арки"
+      - "Днище"
+    recommended_services:
+      - "Антикоррозийная обработка"
+    verified: false
+    source: "memory_user_preference"
+
+  - brand: Hyundai
+    model: Creta
+    body_types: [Кроссовер]
+    risk_zones:
+      - "Арки"
+      - "Днище"
+    recommended_services:
+      - "Антикоррозийная обработка"
+    verified: false
+    source: "memory_user_preference"
+
+brand_groups:
+  value:
+    Отечественные:
+      - Lada (ВАЗ)
+      - УАЗ
+      - ГАЗ
+    Корейские:
+      - Kia
+      - Hyundai
+    Китайские:
+      - Chery
+      - Haval
+      - Geely
+      - Changan
+      - Exeed
+      - Omoda
+      - Jaecoo
+      - Tank
+      - GAC
+    Европейские:
+      - Volkswagen
+      - Renault
+      - Peugeot
+      - Citroen
+      - Opel
+      - Skoda
+      - Volvo
+    Японские:
+      - Toyota
+      - Nissan
+      - Mazda
+      - Mitsubishi
+      - Honda
+      - Suzuki
+      - Subaru
+    Немецкий премиум:
+      - Audi
+      - BMW
+      - Mercedes-Benz
+      - Porsche
+    Американские:
+      - Ford
+      - Chevrolet
+      - Jeep
+      - Chrysler
+      - Dodge
+      - Cadillac
+      - Tesla
+  verified: false
+  source: "calculator_js"
+
+body_types:
+  value: [Хэтчбек, Седан, Кроссовер, Внедорожник]
+  verified: false
+  source: "calculator_js"
+
+notes:
+  - "Популярные модели — из памяти пользователя. Рекомендации по зонам и услугам — предварительные."
+  - "Группы марок и кузова — из JS калькулятора."
+  - "Требуется дополнить: типичные слабые места по моделям, рекомендуемые пакеты."

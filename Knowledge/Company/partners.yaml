@@ -1,0 +1,23 @@
+id: partners
+version: "1.0.0"
+entity_type: partner_directory
+status: draft
+verification: pending
+
+partners:
+  - category: "Поставщики антикоррозийных материалов"
+    names:
+      - "Dinitrol"
+      - "ONB Master"
+      - "MasterWAX"
+    verified: false
+    source: "website"
+
+  - category: "Автосервисы-партнёры"
+    names: []
+    verified: false
+    source: "needs_verification"
+
+notes:
+  - "Требуется заполнить: контакты поставщиков, условия поставки, скидки, сроки."
+  - "Партнёры по снятию/установке узлов — пока неизвестны."

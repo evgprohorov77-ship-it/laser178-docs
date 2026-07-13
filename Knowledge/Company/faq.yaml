@@ -1,0 +1,71 @@
+id: faq
+version: "1.0.0"
+entity_type: faq
+status: draft
+verification: pending
+
+faq:
+  - question: "Сколько длится антикор?"
+    answer: "Зависит от класса кузова и объёма работ. Обычно 1–3 дня."
+    verified: false
+    source: "inferred"
+
+  - question: "Повреждается ли заводское ЛКП?"
+    answer: "Нет, лазерная подготовка сохраняет заводское лакокрасочное покрытие."
+    verified: true
+    source: "website"
+
+  - question: "Есть ли гарантия?"
+    answer: "Да, гарантия на выполненные работы до 5 лет при соблюдении условий эксплуатации."
+    verified: false
+    source: "website"
+
+  - question: "Чем лазерная очистка лучше пескоструя?"
+    answer: "Лазер не истончает металл, не оставляет абразивной пыли и работает точечно."
+    verified: true
+    source: "website"
+
+  - question: "Какие материалы используете?"
+    answer: "Dinitrol, ONB Master, MasterWAX."
+    verified: true
+    source: "website"
+
+  - question: "Нужно ли снимать бамперы и подкрылки?"
+    answer: "Для полноценной обработки — да, арматурные работы выполняются как снятие+установка."
+    verified: true
+    source: "website"
+
+  - question: "Можно ли обработать только одну зону?"
+    answer: "Да, в калькуляторе есть варианты Базовая (1 зона), Стандартная (2 зоны) и Полная (все зоны)."
+    verified: false
+    source: "calculator_js"
+
+  - question: "Какие марки и модели вы обрабатываете?"
+    answer: "Работаем с большинством популярных марок: отечественные, корейские, китайские, европейские, японские, немецкий премиум, американские."
+    verified: false
+    source: "calculator_js"
+
+  - question: "Как рассчитывается цена?"
+    answer: "Цена зависит от марки/модели, типа кузова, перечня работ и материалов. Калькулятор на сайте показывает предварительную стоимость."
+    verified: false
+    source: "inferred"
+
+  - question: "Нужна ли запись заранее?"
+    answer: "needs_verification"
+    verified: false
+    source: "needs_verification"
+
+  - question: "Работаете ли вы по Ленинградской области?"
+    answer: "needs_verification"
+    verified: false
+    source: "needs_verification"
+
+  - question: "Есть ли у вас эвакуатор или выезд?"
+    answer: "needs_verification"
+    verified: false
+    source: "needs_verification"
+
+notes:
+  - "FAQ собран из сайта, калькулятора и общих отраслевых формулировок."
+  - "Вопросы с 'needs_verification' требуют ответа от владельца."
+  - "Каждый ответ перед публикацией в статье должен быть проверен на соответствие Knowledge."

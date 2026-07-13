@@ -1,0 +1,216 @@
+id: materials
+version: "1.0.0"
+entity_type: material_catalog
+status: draft
+verification: pending
+
+pricing_policy:
+  markup_percent: 5
+  rounding: 50
+  client_facing_text: "без формулировок 'от'"
+  verified: false
+  source: "memory_user_preference"
+
+materials:
+  - brand: Dinitrol
+    products:
+      - name: "Dinitrol ML (1 л)"
+        base_price: 1750
+        volume: "1 л"
+        client_price: null
+        verified: false
+        source: "calculator_js"
+        purpose: "мастичная антикоррозийная защита"
+      - name: "Dinitrol 447 (500 мл)"
+        base_price: 1990
+        volume: "500 мл"
+        client_price: null
+        verified: false
+        source: "calculator_js"
+        purpose: "консервация скрытых полостей"
+      - name: "Dinitrol 482 (1 л)"
+        base_price: 2490
+        volume: "1 л"
+        client_price: null
+        verified: false
+        source: "calculator_js"
+        purpose: "антикоррозийная защита"
+      - name: "Dinitrol 77-B (500 мл)"
+        base_price: 2450
+        volume: "500 мл"
+        client_price: null
+        verified: false
+        source: "calculator_js"
+        purpose: "консервация полостей"
+      - name: "Dinitrol 4010 (500 мл)"
+        base_price: 2490
+        volume: "500 мл"
+        client_price: null
+        verified: false
+        source: "calculator_js"
+        purpose: "консервация полостей"
+      - name: "Dinitrol 713IQ (400 мл)"
+        base_price: 6990
+        volume: "400 мл"
+        client_price: null
+        verified: false
+        source: "calculator_js"
+        purpose: "мастичная защита"
+      - name: "Dinitrol 8050 (400 мл)"
+        base_price: 1890
+        volume: "400 мл"
+        client_price: null
+        verified: false
+        source: "calculator_js"
+        purpose: "консервация полостей"
+      - name: "Dinitrol Autocleaner (1 л)"
+        base_price: 1490
+        volume: "1 л"
+        client_price: null
+        verified: false
+        source: "calculator_js"
+        purpose: "обезжиривание"
+
+  - brand: "ONB Master"
+    products:
+      - name: "ONB Warrior (1 л)"
+        base_price: 1499
+        volume: "1 л"
+        client_price: null
+        verified: false
+        source: "calculator_js"
+        purpose: "антикоррозийная защита"
+      - name: "ONB Kolchuga (1 кг)"
+        base_price: 779
+        volume: "1 кг"
+        client_price: null
+        verified: false
+        source: "calculator_js"
+        purpose: "мастичная защита"
+      - name: "ONB Degreaser (1 л)"
+        base_price: 1099
+        volume: "1 л"
+        client_price: null
+        verified: false
+        source: "calculator_js"
+        purpose: "обезжиривание"
+      - name: "ONB Bastion (1 л)"
+        base_price: 2399
+        volume: "1 л"
+        client_price: null
+        verified: false
+        source: "calculator_js"
+        purpose: "антикоррозийная защита"
+      - name: "ONB Armada (1 л)"
+        base_price: 999
+        volume: "1 л"
+        client_price: null
+        verified: false
+        source: "calculator_js"
+        purpose: "антикоррозийная защита"
+      - name: "ONB Cerberus Zn (1,9 кг)"
+        base_price: 4399
+        volume: "1,9 кг"
+        client_price: null
+        verified: false
+        source: "calculator_js"
+        purpose: "цинковая защита"
+      - name: "ONB Excalibur (0,9 кг + 0,2 кг)"
+        base_price: 2199
+        volume: "0,9 кг + 0,2 кг"
+        client_price: null
+        verified: false
+        source: "calculator_js"
+        purpose: "консервация полостей"
+
+  - brand: MasterWAX
+    products:
+      - name: "MasterWAX ML (1 л / 0,75 кг)"
+        base_price: 830
+        volume: "1 л / 0,75 кг"
+        client_price: null
+        verified: false
+        source: "calculator_js"
+        purpose: "консервация полостей"
+      - name: "MasterWAX 313 (1 л / 1 кг)"
+        base_price: 1000
+        volume: "1 л / 1 кг"
+        client_price: null
+        verified: false
+        source: "calculator_js"
+        purpose: "консервация полостей"
+      - name: "MasterWAX 314 Black (1 л / 1 кг)"
+        base_price: 880
+        volume: "1 л / 1 кг"
+        client_price: null
+        verified: false
+        source: "calculator_js"
+        purpose: "консервация полостей"
+      - name: "MasterWAX Wax (1 л / 0,85 кг)"
+        base_price: 770
+        volume: "1 л / 0,85 кг"
+        client_price: null
+        verified: false
+        source: "calculator_js"
+        purpose: "консервация полостей"
+      - name: "MasterWAX BPM4790 (1 л / 1 кг)"
+        base_price: 750
+        volume: "1 л / 1 кг"
+        client_price: null
+        verified: false
+        source: "calculator_js"
+        purpose: "консервация полостей"
+      - name: "MasterWAX Metallic (1 л / 1 кг)"
+        base_price: 820
+        volume: "1 л / 1 кг"
+        client_price: null
+        verified: false
+        source: "calculator_js"
+        purpose: "консервация полостей"
+      - name: "MasterWAX Classic (1 л / 0,75 кг)"
+        base_price: 600
+        volume: "1 л / 0,75 кг"
+        client_price: null
+        verified: false
+        source: "calculator_js"
+        purpose: "консервация полостей"
+      - name: "MasterWAX BPM482 (1 л / 1 кг)"
+        base_price: 850
+        volume: "1 л / 1 кг"
+        client_price: null
+        verified: false
+        source: "calculator_js"
+        purpose: "консервация полостей"
+      - name: "MasterWAX Zinc (1 л / 0,75 кг)"
+        base_price: 680
+        volume: "1 л / 0,75 кг"
+        client_price: null
+        verified: false
+        source: "calculator_js"
+        purpose: "цинковая защита"
+      - name: "MasterWAX 314 White (1 л / 1 кг)"
+        base_price: 1200
+        volume: "1 л / 1 кг"
+        client_price: null
+        verified: false
+        source: "calculator_js"
+        purpose: "консервация полостей"
+      - name: "MasterWAX Rust Converter (1 л / 0,75 кг)"
+        base_price: 715
+        volume: "1 л / 0,75 кг"
+        client_price: null
+        verified: false
+        source: "calculator_js"
+        purpose: "преобразователь ржавчины"
+      - name: "MasterWAX Fast (1 л / 1 кг)"
+        base_price: 950
+        volume: "1 л / 1 кг"
+        client_price: null
+        verified: false
+        source: "calculator_js"
+        purpose: "консервация полостей"
+
+notes:
+  - "Цены base_price взяты из JS калькулятора. client_price = округление(base_price * 1.05 / 50) * 50."
+  - "Требуется подтверждение от поставщика/склада."
+  - "Некоторые позиции не указаны на сайте явно (например, Dinitrol 1000, Dinitrol Metallic) — их калькулятор не показывает в текущем HTML."

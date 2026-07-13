@@ -1,0 +1,122 @@
+id: services
+version: "1.0.0"
+entity_type: service_catalog
+status: draft
+verification: pending
+
+services:
+  - id: disassembly
+    name: "Арматурные работы"
+    short_description: "Снятие и установка бамперов, подкрылков, защит картера, топливного бака, подрамника и других элементов для доступа к обрабатываемым зонам."
+    verified: true
+    source: "website"
+    unit: "снятие+установка"
+    is_package: false
+    included: []
+
+  - id: laser_cleaning
+    name: "Лазерная очистка"
+    short_description: "Лазерная очистка удаляет коррозию, старую краску, масла и окислы без повреждения металла. В отличие от пескоструя, не истончает деталь и не оставляет абразивной пыли."
+    verified: true
+    source: "website"
+    unit: "м²"
+    is_package: false
+    included: []
+    sub_services:
+      - name: "Очистка ржавчины"
+        rate_per_m2: 12500
+        verified: false
+        source: "calculator_js"
+        note: "Цена за 1 м², базовая ставка без учёта мультипликаторов."
+      - name: "Очистка краски"
+        rate_per_m2: 9375
+        verified: false
+        source: "calculator_js"
+        note: "Цена за 1 м², базовая ставка без учёта мультипликаторов."
+      - name: "Очистка старого антикор покрытия"
+        rate_per_m2: 14063
+        verified: false
+        source: "calculator_js"
+        note: "Цена за 1 м², базовая ставка без учёта мультипликаторов."
+
+  - id: surface_preparation
+    name: "Подготовка поверхности"
+    short_description: "Подготовка поверхности перед антикором."
+    verified: true
+    source: "website"
+    unit: "услуга"
+    is_package: false
+    included: []
+    base_price:
+      value: 4000
+      verified: false
+      source: "calculator_js"
+
+  - id: anticor_complex
+    name: "Антикоррозийная обработка (комплекс)"
+    short_description: "Обработка днища, арок и кузова антикоррозийными материалами."
+    verified: true
+    source: "website"
+    unit: "услуга"
+    is_package: false
+    included: []
+    labor_rate_by_body:
+      value:
+        Хэтчбек: 1500
+        Седан: 1700
+        Кроссовер: 1900
+        Внедорожник: 2200
+      verified: false
+      source: "calculator_js"
+    note: "Расчёт труда привязан к объёму материалов в литрах и типу кузова."
+
+  - id: cavity_conservation
+    name: "Консервация скрытых полостей"
+    short_description: "Обработка внутренних полостей кузова, дверей, стоек и лонжеронов восковыми антикоррозийными составами."
+    verified: true
+    source: "website"
+    unit: "услуга"
+    is_package: false
+    included: []
+
+  - id: zinc_primer
+    name: "Нанесение цинкового грунта"
+    short_description: "Защита металла после лазерной очистки."
+    verified: false
+    source: "calculator_js"
+    unit: "м²"
+    rate_per_m2: 1000
+    is_package: false
+    included: []
+
+  - id: epoxy_primer
+    name: "Нанесение эпоксидного грунта"
+    short_description: "Улучшение адгезии материалов."
+    verified: false
+    source: "calculator_js"
+    unit: "м²"
+    rate_per_m2: 500
+    is_package: false
+    included: []
+
+packages:
+  - id: basic
+    name: "Базовая (1 зона)"
+    level_multiplier: 1.0
+    verified: false
+    source: "calculator_js"
+  - id: standard
+    name: "Стандартная (2 зоны)"
+    level_multiplier: 1.5
+    verified: false
+    source: "calculator_js"
+  - id: full
+    name: "Полная (все зоны)"
+    level_multiplier: 2.2
+    verified: false
+    source: "calculator_js"
+
+notes:
+  - "Услуги взяты с https://laser178.ru/services/ и калькулятора."
+  - "Базовые ставки лазерной очистки и прайсы пакетов — из JS калькулятора, требуют подтверждения."
+  - "Единица арматурных работ — 'снятие+установка' одного элемента."

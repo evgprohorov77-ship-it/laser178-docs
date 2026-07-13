@@ -1,0 +1,153 @@
+id: prices
+version: "1.0.0"
+entity_type: price_catalog
+status: draft
+verification: pending
+
+pricing_model:
+  value: "Класс кузова → марка → модель. Арматурные работы — единица 'снятие+установка'. Материалы с наценкой 5%, округление до 50 ₽. Клиент видит только итоговую цену."
+  verified: false
+  source: "memory_user_preference"
+
+brand_groups:
+  Отечественные: 1.0
+  Корейские: 1.15
+  Китайские: 1.10
+  Европейские: 1.25
+  Японские: 1.20
+  Немецкий премиум: 1.50
+  Американские: 1.30
+  verified: false
+  source: "calculator_js"
+
+body_type_multipliers:
+  Хэтчбек: 0.95
+  Седан: 1.00
+  Кроссовер: 1.15
+  Внедорожник: 1.25
+  verified: false
+  source: "calculator_js"
+
+disassembly:
+  unit: "снятие+установка"
+  base_prices:
+    - item: "Снятие+установка переднего бампера"
+      base: 2900
+      verified: false
+      source: "calculator_js"
+    - item: "Снятие+установка заднего бампера"
+      base: 2100
+      verified: false
+      source: "calculator_js"
+    - item: "Снятие+установка колеса"
+      base: 300
+      verified: false
+      source: "calculator_js"
+    - item: "Снятие+установка подкрылка"
+      base: 900
+      verified: false
+      source: "calculator_js"
+    - item: "Снятие+установка термо-экрана"
+      base: 1250
+      verified: false
+      source: "calculator_js"
+    - item: "Снятие+установка защиты картера двигателя"
+      base: 650
+      verified: false
+      source: "calculator_js"
+    - item: "Снятие+установка защиты картера КПП"
+      base: 500
+      verified: false
+      source: "calculator_js"
+    - item: "Снятие+установка глушителя/катализатора"
+      base: 1650
+      verified: false
+      source: "calculator_js"
+    - item: "Снятие+установка топливного бака"
+      base: 5400
+      verified: false
+      source: "calculator_js"
+    - item: "Снятие+установка заднего подрамника"
+      base: 5800
+      verified: false
+      source: "calculator_js"
+    - item: "Снятие+установка карданного вала"
+      base: 1650
+      verified: false
+      source: "calculator_js"
+    - item: "Снятие+установка пластиковая защита днища"
+      base: 2500
+      verified: false
+      source: "calculator_js"
+
+laser_cleaning:
+  unit: "м²"
+  rates:
+    - type: "Очистка ржавчины"
+      rate: 12500
+      verified: false
+      source: "calculator_js"
+    - type: "Очистка краски"
+      rate: 9375
+      verified: false
+      source: "calculator_js"
+    - type: "Очистка старого антикор покрытия"
+      rate: 14063
+      verified: false
+      source: "calculator_js"
+
+preparation:
+  - service: "Подготовка поверхности"
+    base: 4000
+    verified: false
+    source: "calculator_js"
+
+anticor_work:
+  unit: "литр материала"
+  labor_rate_by_body:
+    Хэтчбек: 1500
+    Седан: 1700
+    Кроссовер: 1900
+    Внедорожник: 2200
+  verified: false
+  source: "calculator_js"
+
+primer:
+  - service: "Нанесение цинкового грунта"
+    rate_per_m2: 1000
+    verified: false
+    source: "calculator_js"
+  - service: "Нанесение эпоксидного грунта"
+    rate_per_m2: 500
+    verified: false
+    source: "calculator_js"
+
+packages:
+  - id: basic
+    name: "Базовая (1 зона)"
+    multiplier: 1.0
+  - id: standard
+    name: "Стандартная (2 зоны)"
+    multiplier: 1.5
+  - id: full
+    name: "Полная (все зоны)"
+    multiplier: 2.2
+
+client_facing_rules:
+  - value: "Не показывать base_price."
+    verified: true
+    source: "memory_user_preference"
+  - value: "Округлять итоговую цену до 50 ₽."
+    verified: true
+    source: "memory_user_preference"
+  - value: "Не использовать формулировки 'от' для материалов."
+    verified: true
+    source: "memory_user_preference"
+  - value: "Для комплексов показывать только итоговую стоимость."
+    verified: true
+    source: "memory_user_preference"
+
+notes:
+  - "Все цены — базовые ставки из JS калькулятора. Требуется сверка с актуальным прайсом."
+  - "Для расчёта клиентской цены используется формула: округлить(base * group * body / 50) * 50."
+  - "Арматурные работы: цена за единицу 'снятие+установка'."

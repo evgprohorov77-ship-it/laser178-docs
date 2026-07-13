@@ -1,0 +1,61 @@
+id: guarantees
+version: "1.0.0"
+entity_type: guarantee_policy
+status: draft
+verification: pending
+
+guarantees:
+  - type: workmanship
+    title: "Гарантия на выполненные антикоррозийные работы"
+    duration: "до 5 лет"
+    verified: false
+    source: "website"
+    conditions:
+      - value: "Регулярная мойка автомобиля."
+        verified: false
+        source: "inferred"
+      - value: "Отсутствие ДТП и механических повреждений в обработанных зонах."
+        verified: false
+        source: "inferred"
+      - value: "Своевременный контрольный осмотр."
+        verified: false
+        source: "inferred"
+      - value: "Соблюдение условий эксплуатации, рекомендованных производителем материалов."
+        verified: false
+        source: "inferred"
+
+  - type: material
+    title: "Гарантия от производителя материалов"
+    duration: "varies"
+    verified: false
+    source: "needs_verification"
+    conditions: []
+
+  - type: corrosion_free
+    title: "Гарантия от сквозной коррозии на обработанных участках"
+    duration: "до 5 лет"
+    verified: false
+    source: "website"
+    conditions:
+      - value: "Обработка выполнена полным комплексом согласно технологии."
+        verified: false
+        source: "inferred"
+      - value: "Автомобиль не подвергался аварийному повреждению ЛКП в обработанных зонах."
+        verified: false
+        source: "inferred"
+
+exclusions:
+  - value: "Поверхностная ржавчина, возникшая в результате механических повреждений или нарушения условий эксплуатации."
+    verified: false
+    source: "inferred"
+  - value: "Узлы и агрегаты, не входившие в перечень работ по договору."
+    verified: false
+    source: "inferred"
+  - value: "Последствия скрытых дефектов, не выявленных при осмотре."
+    verified: false
+    source: "inferred"
+
+notes:
+  - "Точные условия гарантии требуют юридического согласования."
+  - "Срок 'до 5 лет' указан на главной странице. Требуется уточнить, для каких именно работ и материалов."
+  - "Требуется подготовить типовой договор с перечнем гарантийных обязательств."

@@ -65,6 +65,8 @@ python3 Scripts/run_laos.py
 8. **Owner Approval.** P0/P1 и production требуют explicit approval.
 9. **Verification + rollback.** После действия проверяем, при сбое откатываем.
 10. **RFC process.** Любой новый Engine или архитектурное изменение — через RFC.
+11. **Knowledge first.** Любой контент ссылается на Knowledge. Неподтверждённые утверждения маркируются `[needs verification]`.
+12. **LAOS Core frozen.** Новые Engine только через RFC. Текущий этап — наполнение Knowledge.
 
 ## Статус
 

@@ -95,18 +95,20 @@ laser178-ai-framework/
 │
 ├── Knowledge/                      # База знаний
 │   ├── README.md
-│   └── Company/
-│       ├── company.md
-│       ├── employees.md
-│       ├── contacts.md
-│       ├── services.md
-│       ├── materials.md
-│       ├── equipment.md
-│       ├── prices.md
-│       ├── faq.md
-│       ├── guarantees.md
-│       ├── partners.md
-│       └── cars.md
+│   ├── schema.md                   # Knowledge Schema
+│   ├── Company/                    # Сущности компании
+│   │   ├── template.yaml           # Единый шаблон
+│   │   ├── company.yaml
+│   │   ├── contacts.yaml
+│   │   ├── employees.yaml
+│   │   ├── services.yaml
+│   │   ├── materials.yaml
+│   │   ├── equipment.yaml
+│   │   ├── prices.yaml
+│   │   ├── faq.yaml
+│   │   ├── guarantees.yaml
+│   │   ├── partners.yaml
+│   │   └── cars.yaml
 │
 ├── Policies/                       # Policy Layer
 │   ├── authorization_policy.md
@@ -201,6 +203,8 @@ Issue (только если не исправлено)
 - Capability `security` отключена до завершения Security Layer.
 - Все автоматические изменения в production требуют owner approval.
 - Dry Run и Backup обязательны перед любым действием.
+- **LAOS Core заморожен.** Новые Engine создаются только через RFC.
+- **Knowledge first.** Любой контент и статьи LAOS проверяются на соответствие Knowledge DB.
 
 ## Расширение
 
@@ -208,3 +212,4 @@ Issue (только если не исправлено)
 2. Добавить `AI/Adapters/GitHub/`, `AI/Adapters/Cloudflare/` и т.д.
 3. Добавить `AI/Memory/` для долговременной памяти агента.
 4. Добавить `AI/Models/agent_state.py`.
+5. Расширить Knowledge DB: добавить `Company/legal.yaml`, `Company/clients.yaml`, `Company/competitors.yaml`.

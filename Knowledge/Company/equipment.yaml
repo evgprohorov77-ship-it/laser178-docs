@@ -1,0 +1,70 @@
+id: equipment
+version: "1.0.0"
+entity_type: equipment_catalog
+status: draft
+verification: pending
+
+equipment:
+  - category: "Лазерное оборудование"
+    items:
+      - name: "Лазерная установка для очистки металла"
+        purpose: "Удаление ржавчины, старой краски, окислов без абразива."
+        verified: false
+        source: "website"
+      - name: "Лазерный очиститель поверхностей"
+        purpose: "Локальная очистка порогов, арок, днища."
+        verified: false
+        source: "inferred"
+
+  - category: "Подготовительное оборудование"
+    items:
+      - name: "Компрессор"
+        purpose: "Подача сжатого воздуха для очистки и нанесения материалов."
+        verified: false
+        source: "inferred"
+      - name: "Покрасочная камера"
+        purpose: "Нанесение антикоррозийных покрытий в контролируемых условиях."
+        verified: false
+        source: "inferred"
+
+  - category: "Подъёмное и разборочное оборудование"
+    items:
+      - name: "Автомобильные подъёмники"
+        purpose: "Доступ к днищу, колёсным аркам, подрамнику."
+        verified: false
+        source: "inferred"
+      - name: "Стапель"
+        purpose: "Фиксация кузова при необходимости."
+        verified: false
+        source: "inferred"
+      - name: "Инструмент для снятия/установки бамперов, подкрылков, защит картера"
+        purpose: "Арматурные работы."
+        verified: false
+        source: "inferred"
+
+  - category: "Обработка скрытых полостей"
+    items:
+      - name: "Набор штанг и насадок для нанесения восковых составов"
+        purpose: "Консервация дверей, стоек, лонжеронов."
+        verified: false
+        source: "inferred"
+      - name: "Эндоскоп / камера для осмотра полостей"
+        purpose: "Контроль качества обработки."
+        verified: false
+        source: "inferred"
+
+  - category: "Диагностика"
+    items:
+      - name: "Толщиномер ЛКП"
+        purpose: "Оценка состояния лакокрасочного покрытия."
+        verified: false
+        source: "inferred"
+      - name: "Осветительные приборы для осмотра днища"
+        purpose: "Выявление коррозии и скрытых дефектов."
+        verified: false
+        source: "inferred"
+
+notes:
+  - "Точные марки и модели оборудования не указаны на сайте. Требуется заполнение."
+  - "Некоторые позиции — предположения на основе описания услуг."
+  - "Все утверждения требуют owner verification."
