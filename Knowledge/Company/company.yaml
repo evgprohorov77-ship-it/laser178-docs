@@ -6,9 +6,9 @@ verification: pending
 
 company:
   legal_name:
-    value: "ООО «Лазер Антикор»"
-    verified: false
-    source: "needs_verification"
+    value: "ИП Прохоров Е.А."
+    verified: true
+    source: "conversation"
   brand_name:
     value: "Лазер Антикор"
     verified: true
@@ -19,28 +19,61 @@ company:
     source: "direct"
   region:
     value: "Санкт-Петербург и Ленинградская область"
+    verified: false
+    source: "inferred"
+  city_for_seo:
+    value: "Санкт-Петербург"
     verified: true
-    source: "website"
+    source: "conversation"
   address:
-    value: "needs_verification"
-    verified: false
-    source: "needs_verification"
+    value: "Санкт-Петербург, ул. Грузинская, 3 корп. 1П"
+    verified: true
+    source: "conversation"
+  arrival:
+    value: "Въезд с ул. Салова"
+    verified: true
+    source: "conversation"
   phone:
-    value: "+7 98* *** 1505"
-    verified: false
-    source: "website_partial"
-  email:
-    value: "Evgprohorov77@gmail.com"
-    verified: false
-    source: "website"
-  business_hours:
+    value: "+79810971505"
+    verified: true
+    source: "conversation"
+  additional_phone:
     value: "needs_verification"
     verified: false
     source: "needs_verification"
+  email:
+    value: "info@laser178.ru"
+    verified: true
+    source: "conversation"
+  business_hours:
+    value: "Пн-Пт с 10:00 до 19:00, Сб с 10:00 до 15:00"
+    verified: true
+    source: "conversation"
+  appointment_required:
+    value: true
+    verified: true
+    source: "conversation"
   year_established:
     value: null
     verified: false
     source: "needs_verification"
+  territory:
+    value: "needs_verification"
+    verified: false
+    source: "needs_verification"
+  messengers:
+    telegram:
+      value: "needs_verification"
+      verified: false
+      source: "needs_verification"
+    whatsapp:
+      value: "needs_verification"
+      verified: false
+      source: "needs_verification"
+    viber:
+      value: "needs_verification"
+      verified: false
+      source: "needs_verification"
 
 mission:
   value: "Защита кузова и скрытых полостей автомобиля от коррозии с сохранением заводского лакокрасочного покрытия."
@@ -85,10 +118,26 @@ target_audience:
 
 owner:
   name: "Евгений Прохоров"
-  role: "Владелец, стратегия, контент"
-  verified: false
+  role: "ИП, владелец, стратегия, контент"
+  verified: true
+  source: "conversation"
+tax_info:
+  inn:
+    value: "REDACTED"
+    verified: true
+    source: "conversation"
+    publish: false
+  ogrnip:
+    value: "REDACTED"
+    verified: true
+    source: "conversation"
+    publish: false
+privacy_note:
+  value: "ИНН и ОГРНИП не публикуются на сайте и в контенте."
+  verified: true
   source: "conversation"
 
 notes:
-  - "Требуется уточнить юридическое наименование, точный адрес, телефон, часы работы, год основания."
+  - "ИНН и ОГРНИП не публикуются — согласно требованию владельца."
+  - "Требуется уточнить: год начала работы, территория обслуживания, дополнительный телефон, мессенджеры."
   - "Требуется подтвердить миссию и формулировку USP."

@@ -2,7 +2,7 @@ id: contacts
 version: "1.0.0"
 entity_type: contact_card
 status: draft
-verification: pending
+verification: partial
 
 contacts:
   website:
@@ -10,26 +10,38 @@ contacts:
     verified: true
     source: "direct"
   email:
-    value: "Evgprohorov77@gmail.com"
-    verified: false
-    source: "website"
+    value: "info@laser178.ru"
+    verified: true
+    source: "conversation"
   phone:
-    value: "+7 98* *** 1505"
+    value: "+79810971505"
+    verified: true
+    source: "conversation"
+  additional_phone:
+    value: "needs_verification"
     verified: false
-    source: "website_partial"
+    source: "needs_verification"
   address:
-    value: "needs_verification"
-    verified: false
-    source: "needs_verification"
+    value: "Санкт-Петербург, ул. Грузинская, 3 корп. 1П"
+    verified: true
+    source: "conversation"
+  arrival:
+    value: "Въезд с ул. Салова"
+    verified: true
+    source: "conversation"
   business_hours:
-    value: "needs_verification"
-    verified: false
-    source: "needs_verification"
+    value: "Пн-Пт с 10:00 до 19:00, Сб с 10:00 до 15:00"
+    verified: true
+    source: "conversation"
+  appointment_required:
+    value: true
+    verified: true
+    source: "conversation"
   social:
     telegram:
-      value: "https://t.me/+798****1505"
+      value: "needs_verification"
       verified: false
-      source: "website_partial"
+      source: "needs_verification"
     vkontakte:
       value: "needs_verification"
       verified: false
@@ -42,6 +54,14 @@ contacts:
       value: "needs_verification"
       verified: false
       source: "needs_verification"
+    whatsapp:
+      value: "needs_verification"
+      verified: false
+      source: "needs_verification"
+    viber:
+      value: "needs_verification"
+      verified: false
+      source: "needs_verification"
 
 messengers_for_management:
   - platform: Telegram
@@ -50,5 +70,6 @@ messengers_for_management:
     source: "conversation"
 
 notes:
-  - "Телефон и адрес частично скрыты на сайте. Требуется полный контакт."
-  - "Социальные сети не обнаружены в публичной части сайта."
+  - "Основной телефон, email, адрес и часы работы подтверждены владельцем."
+  - "Дополнительный телефон, мессенджеры, социальные сети — требуют уточнения."
+  - "ИНН и ОГРНИП не публикуются."
