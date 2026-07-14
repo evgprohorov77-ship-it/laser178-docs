@@ -1,0 +1,144 @@
+---
+version: "1.0.0"
+status: "Active"
+
+description: "WordPress Adapter Security Policy"
+
+allowed_operations:
+  - name: GET_PAGE
+    method: GET
+    endpoint: "/wp-json/wp/v2/pages/{id}"
+    fields: ["any"]
+    conditions: ["read-only"]
+  - name: GET_PAGES
+    method: GET
+    endpoint: "/wp-json/wp/v2/pages"
+    fields: ["any"]
+    conditions: ["read-only"]
+  - name: UPDATE_PAGE_CONTENT
+    method: POST
+    endpoint: "/wp-json/wp/v2/pages/{id}"
+    fields: ["content"]
+    conditions: ["approved", "backup", "dry-run"]
+  - name: UPDATE_TITLE
+    method: POST
+    endpoint: "/wp-json/wp/v2/pages/{id}"
+    fields: ["title"]
+    conditions: ["approved", "backup", "dry-run"]
+  - name: UPDATE_META_DESCRIPTION
+    method: POST
+    endpoint: "/wp-json/wp/v2/pages/{id}"
+    fields: ["meta", "yoast_meta_description"]
+    conditions: ["approved", "backup", "dry-run"]
+  - name: UPDATE_EXCERPT
+    method: POST
+    endpoint: "/wp-json/wp/v2/pages/{id}"
+    fields: ["excerpt"]
+    conditions: ["approved", "backup", "dry-run"]
+  - name: UPDATE_FEATURED_IMAGE
+    method: POST
+    endpoint: "/wp-json/wp/v2/pages/{id}"
+    fields: ["featured_media"]
+    conditions: ["approved", "backup", "dry-run"]
+  - name: CREATE_DRAFT
+    method: POST
+    endpoint: "/wp-json/wp/v2/pages"
+    fields: ["status", "title", "content", "excerpt"]
+    conditions: ["approved", "dry-run", "status_draft"]
+  - name: PUBLISH_APPROVED_DRAFT
+    method: POST
+    endpoint: "/wp-json/wp/v2/pages/{id}"
+    fields: ["status"]
+    conditions: ["approved", "draft_exists"]
+  - name: UPDATE_FAQ_BLOCK
+    method: POST
+    endpoint: "/wp-json/wp/v2/pages/{id}"
+    fields: ["content"]
+    conditions: ["approved", "backup", "dry-run", "faq_section_only"]
+  - name: UPDATE_INTERNAL_LINKS
+    method: POST
+    endpoint: "/wp-json/wp/v2/pages/{id}"
+    fields: ["content"]
+    conditions: ["approved", "backup", "dry-run", "links_only"]
+
+denied_operations:
+  - DELETE
+  - UPDATE_PLUGINS
+  - UPDATE_THEME
+  - UPDATE_MENUS
+  - UPDATE_USERS
+  - UPDATE_ROLES
+  - UPDATE_ROBOTS_TXT
+  - UPDATE_PHP
+  - UPDATE_WP_CONFIG
+  - UPDATE_SITE_OPTIONS
+  - UPDATE_PERMALINKS
+  - UPDATE_SETTINGS
+  - CREATE_USERS
+  - CREATE_ROLES
+  - CREATE_PLUGINS
+  - CREATE_THEMES
+  - DELETE_MEDIA
+  - DELETE_PAGES
+  - DELETE_POSTS
+  - UPDATE_CORE
+
+required_capabilities:
+  - edit_pages
+  - publish_pages
+  - read
+  - upload_files
+
+forbidden_capabilities:
+  - activate_plugins
+  - delete_plugins
+  - switch_themes
+  - edit_themes
+  - edit_users
+  - delete_users
+  - manage_options
+  - update_core
+
+production_lock:
+  enabled: true
+  bypass_requires: owner_approval
+
+backup:
+  enabled: true
+  dir: "Audit/WordPress/Backups"
+  required_for:
+    - UPDATE_PAGE_CONTENT
+    - UPDATE_TITLE
+    - UPDATE_META_DESCRIPTION
+    - UPDATE_EXCERPT
+    - UPDATE_FEATURED_IMAGE
+    - UPDATE_FAQ_BLOCK
+    - UPDATE_INTERNAL_LINKS
+
+rollback:
+  enabled: true
+  auto_on_verification_failure: true
+  log_status: true
+
+audit:
+  log_file: "Audit/WordPress/operations.log"
+  format: "line-delimited-json"
+  required_fields:
+    - task_id
+    - page_id
+    - operation
+    - backup_id
+    - dry_run
+    - verification_result
+    - rollback_status
+    - duration_ms
+    - operator
+    - timestamp
+    - status
+
+credentials:
+  storage: "environment"
+  env_vars:
+    - WP_USERNAME
+    - WP_APP_PASSWORD
+  forbidden_in_repo: true

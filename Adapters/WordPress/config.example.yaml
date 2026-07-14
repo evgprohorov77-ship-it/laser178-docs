@@ -1,0 +1,78 @@
+# WordPress Adapter Configuration
+
+# НЕ ХРАНИТЬ CREDENTIALS В ЭТОМ ФАЙЛЕ
+# Credentials передаются через environment variables:
+# WP_USERNAME, WP_APP_PASSWORD
+
+wordpress:
+  base_url: "https://laser178.ru"
+  api_namespace: "wp/v2"
+  timeout: 30
+  verify_ssl: true
+  user_agent: "LAOS-WordPress-Adapter/1.0"
+
+# Режимы работы
+modes:
+  # dry_run: true — только выводит diff, не отправляет в WP
+  dry_run: true
+  # production_lock: true — блокирует любые обновления без approved: true
+  production_lock: true
+  # auto_rollback: true — откатывать при ошибке verification
+  auto_rollback: true
+
+# Проверки после UPDATE
+verification:
+  html_check: true
+  http_check: true
+  seo_check: true
+  cache_clear: true
+  # Cache clear endpoint или plugin hook
+  cache_clear_url: ""
+  # Ожидаемые статусы
+  expected_http_status: 200
+
+# SEO-поля (зависят от плагина)
+seo_fields:
+  plugin: "yoast"  # или "none"
+  meta_description_field: "yoast_meta_description"
+  title_field: "yoast_title"
+
+# Логирование
+logging:
+  operations_log: "Audit/WordPress/operations.log"
+  backup_dir: "Audit/WordPress/Backups"
+  level: "INFO"
+
+# Разрешённые операции (должны совпадать с Security/WordPress/permissions.yaml)
+allowed_operations:
+  - GET_PAGE
+  - GET_PAGES
+  - UPDATE_PAGE_CONTENT
+  - UPDATE_TITLE
+  - UPDATE_META_DESCRIPTION
+  - UPDATE_EXCERPT
+  - UPDATE_FEATURED_IMAGE
+  - CREATE_DRAFT
+  - PUBLISH_APPROVED_DRAFT
+  - UPDATE_FAQ_BLOCK
+  - UPDATE_INTERNAL_LINKS
+
+# Запрещённые операции (явное перечисление для защиты от непреднамеренного включения)
+denied_operations:
+  - DELETE
+  - UPDATE_PLUGINS
+  - UPDATE_THEME
+  - UPDATE_MENUS
+  - UPDATE_USERS
+  - UPDATE_ROLES
+  - UPDATE_ROBOTS_TXT
+  - UPDATE_PHP
+  - UPDATE_WP_CONFIG
+  - UPDATE_SITE_OPTIONS
+  - UPDATE_PERMALINKS
+  - UPDATE_SETTINGS
+  - CREATE_USERS
+  - CREATE_ROLES
+  - CREATE_PLUGINS
+  - CREATE_THEMES
+  - DELETE_MEDIA

@@ -135,11 +135,11 @@ laser178-ai-framework/
 
 ## Запреты
 
-- Не создавать новые Engines или Adapters в Feature Freeze.
+- Не создавать новые Engines или Adapters в Feature Freeze без RFC и owner approval.
 - Не подключать Production без owner approval.
-- Не использовать WordPress REST API до Security Layer.
-- Не удалять старые `.md` из `Knowledge/Company/` без owner approval и архивации.
+- Не использовать WordPress REST API для production изменений до Security Layer и успешного тестового стенда.
 - Не хранить credentials в репозитории.
+- WordPress Adapter v1 не выполняет DELETE, не меняет plugins/theme/menus/users/roles/robots.txt/PHP/wp-config.
 
 ## Приоритеты
 
@@ -160,8 +160,9 @@ laser178-ai-framework/
 
 - **LAOS Foundation v1.0 завершён.**
 - **LAOS-008A — Site Launch Mode.**
-- Feature freeze ядра: не создаём новые Engine, Adapter, Layer, глобальные абстракции.
-- Разрешено: исправлять ошибки, писать контент, править SEO, заполнять Knowledge, готовить сайт к запуску.
+- **LAOS-009 — WordPress Adapter v1 в разработке (RFC-0009 принят).**
+- Feature freeze ядра: не создаём новые Engine, Adapter, Layer, глобальные абстракции без RFC и owner approval.
+- Разрешено: исправлять ошибки, писать контент, править SEO, заполнять Knowledge, готовить сайт к запуску, разрабатывать LAOS-009.
 - Идеи, не влияющие на запуск, откладываются в `Roadmap/PostLaunch/`.
 
 ## Роадмап
@@ -173,7 +174,8 @@ laser178-ai-framework/
    - SEO + аналитика.
 2. **Post-launch:**
    - Регулярный контент, аудит, мониторинг.
-   - WordPress Adapter и другие интеграции только после запуска (см. `Roadmap/PostLaunch/`).
+   - Развёртывание WordPress Adapter v1 в production после Security Layer и аудита.
+   - Другие интеграции — по мере необходимости (см. `Roadmap/PostLaunch/`).
 
 ## Архитектурные ограничения
 
