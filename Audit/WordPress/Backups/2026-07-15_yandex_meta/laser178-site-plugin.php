@@ -11,6 +11,7 @@ if (!defined('ABSPATH')) exit;
 add_action('wp_head', 'l178_meta_verifications');
 function l178_meta_verifications() {
     echo '<meta name="yandex-verification" content="d14b5b5c9bd82699" />' . "\n";
+    echo '<meta name="google-site-verification" content="oy7Re28KhzfEXISiY70gWPe2rR6CboRnENtSTN-InAE" />' . "\n";
 }
 
 add_action('wp_enqueue_scripts', 'l178_enqueue_styles');
