@@ -1,0 +1,57 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "verdict",
+    "summary",
+    "strengths",
+    "issues",
+    "recommendations",
+    "risks",
+    "confidence",
+    "requires_owner_decision"
+  ],
+  "properties": {
+    "verdict": {
+      "type": "string",
+      "enum": ["approve", "revise", "reject", "insufficient_context"],
+      "description": "Final recommendation of the advisor."
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Concise summary of the review."
+    },
+    "strengths": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Positive aspects of the proposed solution."
+    },
+    "issues": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Problems or concerns found by the advisor."
+    },
+    "recommendations": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Actionable suggestions for improvement."
+    },
+    "risks": {
+      "type": "array",
+      "items": { "type": "string" },
+      "description": "Potential risks if the proposal is implemented as-is."
+    },
+    "confidence": {
+      "type": "number",
+      "minimum": 0.0,
+      "maximum": 1.0,
+      "description": "Confidence level of the advisor (0.0 to 1.0)."
+    },
+    "requires_owner_decision": {
+      "type": "boolean",
+      "description": "Whether the owner must explicitly approve before proceeding."
+    }
+  },
+  "additionalProperties": false
+}

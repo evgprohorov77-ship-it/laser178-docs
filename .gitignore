@@ -1,15 +1,19 @@
-.pyc
+# Advisor virtual environment
+Advisor/.venv/
+
+# Environment secrets
+.env
+.env.local
+
+# Python cache
 __pycache__/
-*.pyo
-*.pyd
-.Python
-env/
-venv/
-.venv/
-*.egg-info/
+*.pyc
 .pytest_cache/
-.mypy_cache/
-*.log
-.DS_Store
-Logs/*/
-!Logs/.gitkeep
+
+# IDE
+.vscode/
+.idea/
+
+# Local logs and audits
+Logs/
+Audit/
